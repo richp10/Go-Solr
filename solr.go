@@ -468,7 +468,7 @@ func Init(host string, port int, core string) (*Connection, error) {
 		return nil, fmt.Errorf("Invalid port (must be 1..65535")
 	}
 
-	url := fmt.Sprintf("http://%s:%d/solr/%s", host, port, core)
+	url := fmt.Sprintf("http://%s:%d/%s", host, port, core)
 	return &Connection{URL: url}, nil
 }
 
